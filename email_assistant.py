@@ -37,8 +37,8 @@ class LegalEmailAssistant:
         self.use_mock = not (self.api_key and LANGCHAIN_AVAILABLE)
         
         if self.use_mock:
-            print("⚠️  Running in MOCK MODE (No API Key found or LangChain missing).")
-            print("   Returning simulated data for demonstration purposes.\n")
+            print("Running in MOCK MODE (No API Key found or LangChain missing).")
+            print("Returning simulated data for demonstration purposes.\n")
         else:
             self.llm = ChatOpenAI(api_key=self.api_key, model=model_name, temperature=0)
 
